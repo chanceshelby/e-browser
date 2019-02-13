@@ -1,0 +1,45 @@
+<script type="text/javascript" language="JavaScript">
+
+ function GoToURL(j) {
+  window.status=('Connecting...')
+  
+var URLis;
+ URLis = document.URLframe.Dest.value
+  
+   if (URLis == "" || URLis.length <= 8)
+           { 
+     j.value = "GO"
+      alert('\You must enter a valid URL');
+         window.status=('Invalid. Try again.')
+           } 
+    else
+        {
+ j.value = "Connecting to " + URLis   
+ var location=("http://" + URLis);
+         this.location.href = location;
+window.status=('Connecting to ' + URLis);
+        }
+        }
+
+</script>
+
+</head>
+
+<body>
+
+<br><br><br>
+
+<center><h1 style="font-family:verdana;color:royalblue;font-size:47px">e<font color="darkorange">-</font>browser</h1></center>
+
+<div align="center"><form name="URLframe">
+
+<table border="0" align="CENTER" style="margin-down:340px;">
+
+<tr><td valign="MIDDLE" align="CENTER"></font><input type="TEXT" name="Dest" size="45" maxlength="50" placeholder="enter url" cols="30" rows="5" style="width:100%; outline:none; background-color: white;border: 3px solid lightgrey; font-size:25px; border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; height: 50px;">
+  
+<br><td align="CENTER"><p><input type="Button" name="Go to" value="GO" style="outline: none; font-size:25px; background-color:lightgrey; border: 5px solid lightgrey; border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px; border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px; height: 50px" onClick="GoToURL(this)"></p></td></tr></table></form></div>
